@@ -18,8 +18,8 @@ jobs:
       # Worker 名称
       NAME: ${{ secrets.NAME || vars.NAME || 'mailfree' }}
       # Cloudflare 凭证
-      CLOUDFLARE_API_TOKEN: ${{cfut_r9bYSbDBkNnPLLK9UMF5w6hiYcDR17SueFTUcSdia48a10be}}
-      CLOUDFLARE_ACCOUNT_ID: ${{cb746066de7528fa4b8f9e18b1eb8224}}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       # D1 数据库（可选，留空则自动创建）
       D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID || vars.D1_DATABASE_ID }}
       D1_DB_NAME: ${{ secrets.D1_DB_NAME || vars.D1_DB_NAME || 'mail_free_db' }}
